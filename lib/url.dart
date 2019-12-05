@@ -1,9 +1,8 @@
-import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firestore_test/login.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+//import 'package:flutter/materialogin.dart';
 import 'package:http/http.dart' as http;
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
@@ -18,7 +17,6 @@ class _UrlState extends State<Url> {
   String inputUrl;
   final _auth = FirebaseAuth.instance;
   FirebaseUser loggedInUser;
-
 
   Future _loadSite(String url) async {
     try {
@@ -130,7 +128,7 @@ class _UrlState extends State<Url> {
         );
         print("pele");
       }
-    }catch(exception){
+    } catch (exception) {
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -167,13 +165,14 @@ class _UrlState extends State<Url> {
       print(exception);
     }
   }
+
   bool showSpinner = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Url Testing",
+          "Url Testing Too Bahd Gan!!!",
           style: TextStyle(
             fontSize: 25.0,
           ),
@@ -233,7 +232,8 @@ class _UrlState extends State<Url> {
                   inputUrl = value;
                 },
                 decoration: InputDecoration(
-                  hintText: 'Enter the Url Address you want to test in the format (https://www.)',
+                  hintText:
+                      'Enter the Url Address you want to test in the format (https://www.)',
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                   border: OutlineInputBorder(
